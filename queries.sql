@@ -19,11 +19,11 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
 
 
--- Adding a new columnn species to type string to the animals table
+-- Adding a new columnn species to type string to the animals
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(100)
 
--- Inside a transaction update the animals table (species column)
+-- Inside a transaction update the animals(species column)
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'unspecified';
 SELECT species FROM animals; -- check the change was made
@@ -34,7 +34,15 @@ SELECT species FROM animals; -- check species columns went back
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon'; 
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL; 
-
+SELECT * FROM animals; -- Check
 COMMIT;
 SELECT species from animals; -- check the change persists
 END;
+
+-- Inside a transaction delete all records in the animals;
+BEGIN TRANSACTION;
+DELETE FROM animals;
+SELECT * FROM animals; -- Check
+
+
+
