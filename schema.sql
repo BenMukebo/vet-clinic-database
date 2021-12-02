@@ -11,3 +11,9 @@ CREATE TABLE animals (
 	weight_kg DECIMAL(10, 2) NOT NULL,
 	species varchar(100)
 );
+
+CREATE TABLE owners (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+	full_name VARCHAR(100) NOT NULL,
+	age INT NOT NULL
+);
