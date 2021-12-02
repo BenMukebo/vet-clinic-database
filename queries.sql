@@ -59,3 +59,6 @@ SELECT COUNT(*) FROM animals;
 
 -- Number of Animals never tried to escaped
 SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
+
+-- Avergae weight of animals
+SELECT ROUND(AVG(weight_kg), 2) FROM animals;
