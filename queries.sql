@@ -27,4 +27,5 @@ ADD COLUMN species VARCHAR(100)
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'unspecified';
 SELECT species FROM animals; -- Check the change was made
-
+ROLLBACK;
+SELECT species FROM animals; -- Check species columns went back
