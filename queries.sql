@@ -12,10 +12,7 @@ SELECT * FROM animals WHERE name <> 'Gabumon';
 -- SELECT * FROM animals WHERE weight_kg > 10.4 AND weight_kg < 17.3;
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
-
 -- SELECT COALESCE(species, 'unspecified') FROM animals
-
-
 
 -- Adding a new columnn species to type string to the animals
 ALTER TABLE animals
@@ -51,7 +48,11 @@ DELETE FROM animals WHERE  date_of_birth > '2022-01-01';
 SAVEPOINT SAVEPOINT_1;
 
 UPDATE animals SET weight_kg = weight_kg * -1;
-SELECT weight_kg FROM animals; -- check
 ROLLBACK TO SAVEPOINT_1;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0; 
 COMMIT;
+SELECT weight_kg FROM animals; -- check
+
+-- Write queries to answer the following questions
+-- Animals number
+SELECT COUNT(*) FROM animals;
