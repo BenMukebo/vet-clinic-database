@@ -54,4 +54,4 @@ UPDATE animals SET weight_kg = weight_kg * -1;
 SELECT weight_kg FROM animals; -- check
 ROLLBACK TO SAVEPOINT_1;
 UPDATE animals SET weight_kg = weight_kg * -1 WHERE weight_kg < 0; 
-
+COMMIT;
