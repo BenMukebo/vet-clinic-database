@@ -44,5 +44,5 @@ BEGIN TRANSACTION;
 DELETE FROM animals;
 SELECT * FROM animals; -- Check
 ROLLBACK;
-
+SELECT * FROM animals; -- verify the change
 
