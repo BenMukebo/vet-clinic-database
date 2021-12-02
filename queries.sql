@@ -44,5 +44,8 @@ BEGIN TRANSACTION;
 DELETE FROM animals;
 SELECT * FROM animals; -- Check
 ROLLBACK;
-SELECT * FROM animals; -- verify the change
+SELECT * FROM animals; -- check if all records still exist
 
+-- Inside a transaction Delete all animals born after JAN-01-2022;
+BEGIN TRANSACTION;
+DELETE FROM animals WHERE  date_of_birth > '2022-01-01';
