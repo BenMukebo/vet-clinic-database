@@ -24,4 +24,5 @@ CREATE TABLE species (
 );
 
 ALTER TABLE animals DROP COLUMN species;
+ALTER TABLE animals ADD species_id BIGINT REFERENCES species (id);
 
