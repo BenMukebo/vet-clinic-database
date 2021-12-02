@@ -62,3 +62,8 @@ SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
 
 -- Avergae weight of animals
 SELECT ROUND(AVG(weight_kg), 2) FROM animals;
+
+-- Who escapes the most
+-- SELECT neutered, MAX(escape_attempts) FROM animals GROUP BY neutered;
+SELECT name, escape_attempts from animals WHERE escape_attempts = (select MAX(escape_attempts) from animals);
+
