@@ -36,3 +36,5 @@ UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon';
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL; 
 
 COMMIT;
+SELECT species from animals; -- check the change persists
+END;
