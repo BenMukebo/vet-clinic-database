@@ -43,6 +43,6 @@ END;
 BEGIN TRANSACTION;
 DELETE FROM animals;
 SELECT * FROM animals; -- Check
-
+ROLLBACK;
 
 
