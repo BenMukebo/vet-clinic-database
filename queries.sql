@@ -17,8 +17,6 @@ SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
 
 
 
-
-
 -- Adding a new columnn species to type string to the animals
 ALTER TABLE animals
 ADD COLUMN species VARCHAR(100)
@@ -49,3 +47,10 @@ SELECT * FROM animals; -- check if all records still exist
 -- Inside a transaction Delete all animals born after JAN-01-2022;
 BEGIN TRANSACTION;
 DELETE FROM animals WHERE  date_of_birth > '2022-01-01';
+
+SAVEPOINT SAVEPOINT_1;
+
+
+
+
+
