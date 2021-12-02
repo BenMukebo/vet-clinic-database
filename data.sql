@@ -11,3 +11,11 @@ INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) 
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Angemon', date '2005-06-12', 1, TRUE, -45);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Boarmon', date '2005-07-07', 7, TRUE, 20.4);
 INSERT INTO animals (name, date_of_birth, escape_attempts, neutered, weight_kg) VALUES('Blossom', date '1998-08-13', 3, TRUE, 17);
+
+/* Insert the following data into the owners table: */
+INSERT INTO owners (full_name, age) VALUES('Sam Smith', 34);
+INSERT INTO owners (full_name, age) VALUES('Jennifer Orwell', 19);
+INSERT INTO owners (full_name, age) VALUES('Bob', 45);
+INSERT INTO owners (full_name, age) VALUES('Melody Pond', 77);
+INSERT INTO owners (full_name, age) VALUES('Dean Winchester', 14);
+INSERT INTO owners (full_name, age) VALUES('Jodie Whittaker', 38);
