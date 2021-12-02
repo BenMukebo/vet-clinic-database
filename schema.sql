@@ -1,5 +1,7 @@
 /* Database schema to keep the structure of entire database. */
 
+DROP TABLE animals;
+
 CREATE TABLE animals (
     id BIGSERIAL NOT NULL PRIMARY KEY,
 	name VARCHAR(100) NOT NULL,
