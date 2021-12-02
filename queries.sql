@@ -56,3 +56,6 @@ SELECT weight_kg FROM animals; -- check
 -- Write queries to answer the following questions
 -- Animals number
 SELECT COUNT(*) FROM animals;
+
+-- Number of Animals never tried to escaped
+SELECT COUNT(*) FROM animals WHERE escape_attempts = 0;
