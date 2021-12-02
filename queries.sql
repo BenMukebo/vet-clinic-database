@@ -33,8 +33,4 @@ SELECT species FROM animals; -- Check species columns went back
 -- Inside a transaction to update animals (species column)
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon'; 
-
-
-
-
-
+UPDATE animals SET species = 'pokemon' WHERE species IS NULL; 
