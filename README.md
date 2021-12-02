@@ -10,6 +10,10 @@
 - Build a relational database based on a real-life example.
 - Create tables in SQL.
 - Insert and query data in SQL.
+- Use database transactions.
+- Modify and delete data in SQL.
+- Prepare complex queries that answer analytical questions.
+
 
 ## Getting Started
 
