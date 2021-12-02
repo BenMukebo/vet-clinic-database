@@ -26,11 +26,13 @@ ADD COLUMN species VARCHAR(100)
 -- Inside a transaction update the animals table (species column)
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'unspecified';
-SELECT species FROM animals; -- Check the change was made
+SELECT species FROM animals; -- check the change was made
 ROLLBACK;
-SELECT species FROM animals; -- Check species columns went back
+SELECT species FROM animals; -- check species columns went back
 
 -- Inside a transaction to update animals (species column)
 BEGIN TRANSACTION;
 UPDATE animals SET species = 'digimon' WHERE name LIKE '%mon'; 
 UPDATE animals SET species = 'pokemon' WHERE species IS NULL; 
+
+COMMIT;
