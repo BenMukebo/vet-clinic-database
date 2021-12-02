@@ -11,3 +11,20 @@ SELECT * FROM animals WHERE neutered= TRUE;
 SELECT * FROM animals WHERE name <> 'Gabumon';
 -- SELECT * FROM animals WHERE weight_kg > 10.4 AND weight_kg < 17.3;
 SELECT * FROM animals WHERE weight_kg BETWEEN 10.4 AND 17.3;
+
+
+-- SELECT COALESCE(species, 'unspecified') FROM animals
+
+
+
+
+
+-- Adding a new columnn species to type string to the animals table
+ALTER TABLE animals
+ADD COLUMN species VARCHAR(100)
+
+-- Transaction to update species column
+BEGIN TRANSACTION;
+UPDATE animals SET species = 'unspecified';
+SELECT species FROM animals; -- Check the change was made
+
