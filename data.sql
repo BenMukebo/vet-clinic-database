@@ -25,19 +25,16 @@ INSERT INTO species (name) VALUES('Digimon');
 
 
 
--- Modify inserted animals so it includes the species_id value
+-- Modify inserted animals so it includes the species_id value:
 UPDATE animals
 SET species_id = (SELECT id from species WHERE name = 'Digimon')
 WHERE name like '%mon';
--- UPDATE animals SET species_id = (SELECT id from species WHERE name = 'Digimon') WHERE name like '%mon';
 
 UPDATE animals
 SET species_id = (SELECT id from species WHERE name = 'Pokemon')
 WHERE species_id IS NULL;
--- UPDATE animals SET species_id = (SELECT id from species WHERE name = 'Pokemon') WHERE species_id IS NULL;
 
-
--- Modify inserted animals to include owner information (owner_id) 
+-- Modify inserted animals to include owner information (owner_id): 
 UPDATE animals
 SET owner_id = (SELECT id from owners WHERE full_name = 'Sam Smith')
 WHERE name = 'Agumon';
