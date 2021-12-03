@@ -23,8 +23,6 @@ INSERT INTO owners (full_name, age) VALUES('Jodie Whittaker', 38);
 INSERT INTO species (name) VALUES('Pokemon');
 INSERT INTO species (name) VALUES('Digimon');
 
-
-
 -- Modify inserted animals so it includes the species_id value:
 UPDATE animals
 SET species_id = (SELECT id from species WHERE name = 'Digimon')
