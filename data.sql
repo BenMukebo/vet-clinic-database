@@ -47,14 +47,20 @@ WHERE name = 'Devimon' OR name = 'Plantmon';
 
 UPDATE animals
 SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond')
-WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Bloss+om';
 
 UPDATE animals
 SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
 WHERE name = 'Angemon'  OR name = 'Boarmon';
 
+/* last Milestone  */
+
 /* Insert the following data for vets */
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('William Tatcher', 45, date '2000-04-23');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Maisy Smith', 26, date '2019-01-17');
 INSERT INTO vets (name, age, date_of_graduation) VALUES ('Stephanie Mendez', 64, date '1981-05-04');
-INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harknes', 38, date '2008-06-08');
+INSERT INTO vets (name, age, date_of_graduation) VALUES ('Jack Harkness', 38, date '2008-06-08');
+/* Insert the following data for specialties */
+INSERT INTO specializations (species_id, vets_id)
+VALUES ((SELECT id FROM species WHERE name = 'Pokemon'), (SELECT id FROM vets WHERE name = 'William Tatcher')),
+	   
