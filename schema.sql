@@ -27,6 +27,8 @@ ALTER TABLE animals DROP COLUMN species;
 ALTER TABLE animals ADD species_id BIGINT REFERENCES species (id);
 ALTER TABLE animals ADD owner_id BIGINT REFERENCES owners (id);
 
+/* last Milestone  */
+
 CREATE TABLE vets (
     id BIGSERIAL NOT NULL PRIMARY KEY,
 	name VARCHAR(100) NOT NULL,
@@ -35,12 +37,12 @@ CREATE TABLE vets (
 );
 
 CREATE TABLE specializations (
-	species_id INT,
-	vets_id INT
+	species_id BIGINT REFERENCES species (id),
+	vets_id BIGINT REFERENCES vets (id)
 );
 
 CREATE TABLE visits (
-	animal_id INT,
-	vets_id INT,
+	animals_id BIGINT REFERENCES animals (id),
+	vets_id BIGINT REFERENCES vets (id)
 	date_of_visit DATE
 );
