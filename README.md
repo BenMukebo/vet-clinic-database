@@ -16,6 +16,9 @@
 - Use primary key & foreign key mechanism for joining tables.
 - Query multiple tables.
 - Prepare complex queries that answer analytical questions.
+- Understand the different types of relationships between tables.
+- Prepare complex queries that answer analytical questions.
+- Use primary key & foreign key mechanism for joining tables.
 
 
 ## Getting Started
