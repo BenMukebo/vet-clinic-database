@@ -33,3 +33,14 @@ CREATE TABLE vets (
 	age INT NOT NULL,
 	date_of_graduation DATE
 );
+
+CREATE TABLE specializations (
+	species_id INT,
+	vets_id INT
+);
+
+CREATE TABLE visits (
+	animal_id INT,
+	vets_id INT,
+	date_of_visit DATE
+);
