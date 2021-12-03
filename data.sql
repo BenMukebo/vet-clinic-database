@@ -30,3 +30,9 @@ UPDATE animals
 SET species_id = (SELECT id from species WHERE name = 'Digimon')
 WHERE name like '%mon';
 -- UPDATE animals SET species_id = (SELECT id from species WHERE name = 'Digimon') WHERE name like '%mon';
+
+UPDATE animals
+SET species_id = (SELECT id from species WHERE name = 'Pokemon')
+WHERE species_id IS NULL;
+-- UPDATE animals SET species_id = (SELECT id from species WHERE name = 'Pokemon') WHERE species_id IS NULL;
+
