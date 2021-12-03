@@ -49,3 +49,7 @@ WHERE name = 'Gabumon' OR name = 'Pikachu';
 UPDATE animals
 SET owner_id = (SELECT id from owners WHERE full_name = 'Bob')
 WHERE name = 'Devimon' OR name = 'Plantmon';
+
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond')
+WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
