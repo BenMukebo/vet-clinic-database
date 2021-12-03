@@ -73,4 +73,8 @@ WHERE date_of_birth BETWEEN DATE '1990-01-01' AND '2000-12-31' GROUP BY species;
 select name from animals
 JOIN owners on animals.owner_id = owners.id 
 WHERE full_name = 'Melody Pond';
-~
+
+-- List of all animals that are pokemon (their type is Pokemon).
+select animals.*, species.name as species_name from animals
+JOIN species on animals.species_id = species.id
+WHERE species.name = 'Pokemon';
