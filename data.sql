@@ -53,3 +53,7 @@ WHERE name = 'Devimon' OR name = 'Plantmon';
 UPDATE animals
 SET owner_id = (SELECT id from owners WHERE full_name = 'Melody Pond')
 WHERE name = 'Charmander' OR name = 'Squirtle' OR name = 'Blossom';
+
+UPDATE animals
+SET owner_id = (SELECT id from owners WHERE full_name = 'Dean Winchester')
+WHERE name = 'Angemon'  OR name = 'Boarmon';
