@@ -53,7 +53,11 @@ $  sudo -u postgres psql
 ```bash
 $   \q   or   $   exit
 ```
- 
+  
+```bash
+$  \c <vet_clinic>
+```
+
 ## Built With
 
 This project is build with:
