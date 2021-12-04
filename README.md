@@ -44,7 +44,16 @@ $  sudo apt update
 $   sudo apt install postgresql postgresql-contrib
 ```
 
+## Usage
 
+```bash
+$  sudo -u postgres psql
+```
+  
+```bash
+$   \q   or   $   exit
+```
+ 
 ## Built With
 
 This project is build with:
