@@ -29,11 +29,26 @@ This repository includes files with plain SQL that can be used to recreate a dat
 - Use [data.sql](./data.sql) to populate tables with sample data.
 - Check [queries.sql](./queries.sql) for examples of queries that can be run on a newly created database. **Important note: this file might include queries that make changes in the database (e.g., remove records). Use them responsibly!**
 
+
+## Install
+
+- To install PostgreSQL, first refresh your server’s local package index:
+
+```bash
+$  sudo apt update
+```
+  
+- Then, install the Postgres package along with a -contrib package that adds some additional utilities and functionality:
+
+```bash
+$   sudo apt install postgresql postgresql-contrib
+```
+
+
 ## Built With
 
 This project is build with:
 
-- ![SQL](https://img.shields.io/badge/SQL-00000F?style=for-the-badge&logo=sql&logoColor=white)
 -  ![Postgre](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
 
 ## Authors
