@@ -19,6 +19,8 @@
 - Understand the different types of relationships between tables.
 - Prepare complex queries that answer analytical questions.
 - Use primary key & foreign key mechanism for joining tables.
+- Understand what can impact database performance.
+- 
 
 
 ## Getting Started
