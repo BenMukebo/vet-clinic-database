@@ -21,6 +21,7 @@
 - Use primary key & foreign key mechanism for joining tables.
 - Understand what can impact database performance.
 - 
+Diagram a data model clearly and explain what it's doing.
 
 
 ## Getting Started
@@ -59,6 +60,12 @@ $   \q   or   $   exit
 ```bash
 $  \c <vet_clinic>
 ```
+
+## Diagram
+
+||             schema diagram     ||
+|-|-----------------------------------|-|
+||![screenshot](./img/schema_1.png)||
 
 ## Built With
 
